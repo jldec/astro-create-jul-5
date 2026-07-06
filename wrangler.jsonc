@@ -3,7 +3,7 @@
   "compatibility_date": "2026-07-05",
   "compatibility_flags": ["global_fetch_strictly_public"],
   "name": "astro-create-jul-5",
-  "main": "@astrojs/cloudflare/entrypoints/server",
+  "main": "./src/worker.ts",
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS"
