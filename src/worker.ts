@@ -8,8 +8,9 @@ app.get('/time', (c) => {
   const cf = c.req.raw.cf
   const colo = cf?.colo ?? 'unknown'
   const city = cf?.city ?? 'unknown'
+  const state = cf?.regionCode ?? cf?.region ?? 'unknown'
   const country = cf?.country ?? 'unknown'
-  return c.text(`${time}\n${colo} ${city} ${country}`)
+  return c.text(`${time}\n${colo} ${city} ${state} ${country}`)
 })
 app.all('*', (c) => handle(c.req.raw, c.env, c.executionCtx as ExecutionContext))
 
