@@ -3,6 +3,7 @@
 Astro 7 on Cloudflare Workers with a custom Hono worker entrypoint.
 
 - **Stack:** Astro 7, `@astrojs/cloudflare`, Hono, Tailwind CSS 4, Wrangler, TypeScript
+- **Types:** `@cloudflare/workers-types` v5 in `tsconfig.json`; `pnpm types` generates `worker-configuration.d.ts` — see [Workers Types v5 changelog](https://developers.cloudflare.com/changelog/post/2026-07-03-workers-types-v5/)
 - **Worker:** `src/worker.ts` — Hono routes custom endpoints; everything else delegates to `@astrojs/cloudflare/handler`
 - **`GET /time`:** returns ISO timestamp plus `request.cf` colo, city, state, country (plain text)
 - **Home page:** prerendered static `/` with a **time** button that fetches `/time` and shows RTT
