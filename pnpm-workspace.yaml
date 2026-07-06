@@ -3,4 +3,4 @@ allowBuilds:
   sharp: false
   workerd: false
 
-lockfile: false
+lockfile: true
